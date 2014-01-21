@@ -8,6 +8,7 @@ define([
 	'angularMocks',
 	'angularTranslate',
 	'aopTranslate',
+  'stringFilter',
 	'firebase',
 	'firebaseSimpleLogin',
 	'angularFire',
@@ -20,6 +21,7 @@ define([
 		var aop = angular.module('angularOscarPoolApp', [
 			'ngRoute',
 			'firebase',
+			'StringFiltersModule',
 			'aop.translate',
 			'main',
 			'aop.listNominees'

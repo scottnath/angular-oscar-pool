@@ -9,6 +9,8 @@ requirejs.config({
         angularMocks: '/bower_components/angular-mocks/angular-mocks',
         angularTranslate: '/bower_components/angular-translate/angular-translate.min',
 				aopTranslate: 'utils/translate',
+		    stringFilter: 'filters/strings',
+		    _string: '/bower_components/underscore.string/dist/underscore.string.min',
         firebase: '/bower_components/firebase/firebase',
         firebaseSimpleLogin: '/bower_components/firebase-simple-login/firebase-simple-login',
         angularFire: '/bower_components/angularfire/angularfire',

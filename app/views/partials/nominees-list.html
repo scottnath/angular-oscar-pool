@@ -4,10 +4,11 @@
 		<ul>
 			<li ng-repeat="category in categories">{{ category.category }}
 				<ul>
-					<li ng-repeat="nominee in category.nominees">{{ nominee.title }}</li>
+					<li ng-repeat="nominee in category.nominees">
+						<label>
+							<input type="radio" ng-model="$parent.title" name="nom-{{ category.category | slugify }}" ng-value="{{ nominee.title }}">{{ nominee.title }}
+						</label></li>
 				</ul>
 			</li>
 		</ul>
-		
-    <div my-customer></div>
   </div>
