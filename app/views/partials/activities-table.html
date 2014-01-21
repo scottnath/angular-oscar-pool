@@ -1,0 +1,22 @@
+<table>
+  <thead>
+  <tr>
+    <th>{{ 'ACTIVITIY_NAME_TITLE' | translate }}</th>
+    <th>{{ 'ACTIVITIY_RECORDING_TITLE' | translate }}</th>
+    <th>{{ 'ACTIVITIY_JUDGEMENT_TITLE' | translate }}</th>
+    <th>{{ 'ACTIVITIY_STARTDATE_TITLE' | translate }}</th>
+    <th><a href="#/new"><i class="icon-plus-sign"></i>ADD</a></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr ng-repeat="project in projects | orderByPriority | filter:search | orderBy:'name'">
+    <td><a href="{{project.site}}" target="_blank">{{project.name}}</a></td>
+    <td>{{project.repeat | recordTypeName}}</td>
+    <td>{{project.goodbad}}</td>
+    <td>{{project.startdate}}</td>
+    <td>
+      <a href="#/edit/{{project.$id}}"><i class="icon-pencil"></i>EDIT</a>
+    </td>
+  </tr>
+  </tbody>
+</table>

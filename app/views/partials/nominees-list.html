@@ -1,0 +1,13 @@
+
+
+	<div ng-controller="getNomineesCtrl">
+		<ul>
+			<li ng-repeat="category in categories">{{ category.category }}
+				<ul>
+					<li ng-repeat="nominee in category.nominees">{{ nominee.title }}</li>
+				</ul>
+			</li>
+		</ul>
+		
+    <div my-customer></div>
+  </div>

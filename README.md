@@ -1,2 +1,2 @@
-angular-oscar-pool
-==================
+angular-activity-tracker
+========================

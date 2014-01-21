@@ -1,0 +1,172 @@
+{"categories":[
+	{"category":"Best Picture", "nominees":[
+		{"title":"12 Years a Slave"},
+		{"title":"American Hustle"},
+		{"title":"Gravity"},
+		{"title":"Captain Phillips"},
+		{"title":"Dallas Buyers Club"},
+		{"title":"Her"},
+		{"title":"Nebraska"},
+		{"title":"Philomena"},
+		{"title":"The Wolf of Wall Street"}
+	]},
+	{"category":"Best Actor", "nominees":[
+		{"title":"Christian Bale: American Hustle"},
+		{"title":"Bruce Dern: Nebraska"},
+		{"title":"Leonardo DiCaprio: The Wolf Of Wall Street"},
+		{"title":"Chiwetel Ejiofor: 12 Years a Slave"},
+		{"title":"Matthew McConaughey: Dallas Buyers Club"}
+	]},
+	{"category":"Best Actress", "nominees":[
+		{"title":"Cate Blanchett: Blue Jasmine"},
+		{"title":"Amy Adams: American Hustle"},
+		{"title":"Sanra Bullock: Gravity"},
+		{"title":"Judi Dench: Philomena"},
+		{"title":"Meryl Streep: August: Osage County"}
+	]},
+	{"category":"Best Supporting Actor", "nominees":[
+		{"title":"Barkhad Abdi: Captain Phillips"},
+		{"title":"Bradley Cooper: American Hustle"},
+		{"title":"Michael Fassbender: 12 Years a Slave"},
+		{"title":"Jonah Hill: The Wolf of Wall Street"},
+		{"title":"Jared Leto: Dallas Buyers Club"}
+	]},
+	{"category":"Best Supporting Actress", "nominees":[
+		{"title":"Lupita Nyong'o: 12 Years a Slave"},
+		{"title":"Sally Hawkins: Blue Jasmine"},
+		{"title":"Jennifer Lawrence: American Hustle"},
+		{"title":"June Squibb: Nebraska"},
+		{"title":"Julia Roberts: August: Osage County"}
+	]},
+		{"category":"Best Director", "nominees":[
+		{"title":"Alfonso Cuaron: Gravity"},
+		{"title":"Steve McQueen: 12 Years a Slave"},
+		{"title":"David O. Russell: American Hustle"},
+		{"title":"Alexander Payne: Nebraska"},
+		{"title":"Martin Scorsese: The Wolf of Wall Street"}
+	]},
+	{"category":"Best Animated Feature", "nominees":[
+		{"title":"Frozen"},
+		{"title":"The Croods"},
+		{"title":"Despicable Me 2"},
+		{"title":"Ernest &amp; Celestine"},
+		{"title":"The Wind Rises"}
+	]},
+	{"category":"Best Foreign Language Film", "nominees":[
+		{"title":"The Broken Circle Breakdown"},
+		{"title":"The Great Beauty"},
+		{"title":"The Hunt"},
+		{"title":"The Missing Picture"},
+		{"title":"Omar"}
+	]},
+	{"category":"Best Documentary", "nominees":[
+		{"title":"The Act of Killing"},
+		{"title":"Cutie and the Boxer"},
+		{"title":"Dirty Wars"},
+		{"title":"The Square"},
+		{"title":"20 Feet from Stardom"}
+	]},
+	{"category":"Best Original Screenplay", "nominees":[
+		{"title":"American Hustle"},
+		{"title":"Blue Jasmine"},
+		{"title":"Dallas Buyers Club"},
+		{"title":"Her"},
+		{"title":"Nebraska"}
+	]},
+	{"category":"Best Adapted Screenplay", "nominees":[
+		{"title":"12 Years a Slave"},
+		{"title":"Before Midnight"},
+		{"title":"Captain Phillips"},
+		{"title":"Philomena"},
+		{"title":"The Wolf of Wall Street"}
+	]},
+	{"category":"Best Original Score", "nominees":[
+		{"title":"The Book Thief"},
+		{"title":"Gravity"},
+		{"title":"Her"},
+		{"title":"Philomena"},
+		{"title":"Saving Mr. Banks"}
+	]},
+	{"category":"Best Original Song", "nominees":[
+		{"title":"Alone Yet Not Alone: Alone Yet Not Alone"},
+		{"title":"Let It Go: Frozen"},
+		{"title":"Ordinary Love: Mandela: Long Walk To Freedom"},
+		{"title":"Happy: Despicable Me 2"},
+		{"title":"The Moon Song: Her"}
+	]},
+	{"category":"Best Editing", "nominees":[
+		{"title":"American Hustle"},
+		{"title":"Captain Phillips"},
+		{"title":"Dallas Buyers Club"},
+		{"title":"Gravity"},
+		{"title":"12 Years a Slave"}
+	]},
+	{"category":"Best Cinematography", "nominees":[
+		{"title":"Philippe Le Sourd: The Grandmaster"},
+		{"title":"Emmanuel Lubezki: Gravity"},
+		{"title":"Bruno Delbonnel: Inside Llewyn Davis"},
+		{"title":"Roger Deakins: Prisoners"},
+		{"title":"Phedon Papamichael: Nebraska"}
+	]},
+	{"category":"Best Production Design", "nominees":[
+		{"title":"American Hustle"},
+		{"title":"Gravity"},
+		{"title":"The Great Gatsby"},
+		{"title":"Her"},
+		{"title":"12 Years a Slave"}
+	]},
+	{"category":"Best Costume Design", "nominees":[
+		{"title":"American Hustle"},
+		{"title":"The Grandmaster"},
+		{"title":"The Great Gatsby"},
+		{"title":"Invisible Woman"},
+		{"title":"12 Years a Slave"}
+	]},
+	{"category":"Best Makeup", "nominees":[
+		{"title":"Dallas Buyers Club"},
+		{"title":"Jackass Presents: Bad Grandpa"},
+		{"title":"The Lone Ranger"}
+	]},
+	{"category":"Best Sound Editing", "nominees":[
+		{"title":"All Is Lost"},
+		{"title":"Captain Philipps"},
+		{"title":"Gravity"},
+		{"title":"The Hobbit: The Desolation of Smaug"},
+		{"title":"Lone Survivor"}
+	]},
+	{"category":"Best Sound Mixing", "nominees":[
+		{"title":"Captain Philipps"},
+		{"title":"Gravity"},
+		{"title":"The Hobbit: The Desolation of Smaug"},
+		{"title":"Inside Llewyn Davis"},
+		{"title":"Lone Survivor"}
+	]},
+	{"category":"Best Visual Effects", "nominees":[
+		{"title":"Gravity"},
+		{"title":"Iron Man 3"},
+		{"title":"The Hobbit: The Desolation of Smaug"},
+		{"title":"The Lone Ranger"},
+		{"title":"Star Trek Into Darkness"}
+	]},
+	{"category":"Best Live-Action Short", "nominees":[
+		{"title":"Aquel No Era Yo (That Wasn't Me)"},
+		{"title":"Avant Que De Tout Perdre (Just Before Losing Everything)"},
+		{"title":"Helium"},
+		{"title":"Pitääkö Mun Kaikki Hoitaa? (Do I Have to Take Care of Everything?)"},
+		{"title":"The Voorman Problem"}
+	]},
+	{"category":"Best Animated Short", "nominees":[
+		{"title":"Feral"},
+		{"title":"Get A Horse!"},
+		{"title":"Mr. Hubolt"},
+		{"title":"Possessions"},
+		{"title":"Room on the Broom"}
+	]},
+	{"category":"Best Documentary Short", "nominees":[
+		{"title":"Cave Digger"},
+		{"title":"Facing Fear"},
+		{"title":"Karama Has No Walls"},
+		{"title":"The Lady In Number 6: Music Saved My Life"},
+		{"title":"Prison Terminal: The Last Days of Private Jack Hall"}
+	]}
+]}

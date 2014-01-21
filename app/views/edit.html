@@ -1,0 +1,36 @@
+<form name="myForm">
+
+  <div class="control-group" ng-class="{error: myForm.name.$invalid}">
+    <label>{{ 'ACTIVITIY_NAME_TITLE' | translate }}</label>
+    <input type="text" name="name" ng-model="project.name" required>
+    <span ng-show="myForm.name.$error.required" class="help-inline">
+        Required</span>
+  </div>
+  <div class="control-group" ng-class="{error: myForm.repeat.$invalid}">
+    <label>{{ 'ACTIVITIY_RECORDING_TITLE' | translate }}</label>
+    <select 
+    	name="repeat"
+    	ng-model="project.repeat"
+    	ng-options="i.id as i.name for i in repeatTypes"><option value="">---choose---</option></select>
+    	
+    <span ng-show="myForm.repeat.$error.required" class="help-inline">
+        Required</span>
+  </div>
+  <div class="control-group" ng-class="{error: myForm.name.$invalid}">
+  	<div class="title-label">{{ 'ACTIVITIY_JUDGEMENT_TITLE' | translate }}</div>
+    <label>Good<input type="radio" name="goodbad" value="good" ng-model="project.goodbad"></label>
+    <label>Bad<input type="radio" name="goodbad" value="bad" ng-model="project.goodbad"></label>
+  </div>
+  <div class="control-group" ng-class="{error: myForm.startdate.$invalid}">
+    <label>{{ 'ACTIVITIY_STARTDATE_TITLE' | translate }}</label>
+    <input type="text" name="startdate" ng-model="project.startdate" ui-date-format="DD, d MM, yy" ui-date="dateOptions">
+  </div>
+ 
+ 
+  <br>
+  <a href="#/" class="btn">Cancel</a>
+  <button ng-click="save()" ng-disabled="myForm.$invalid"
+          class="btn btn-primary">Save</button>
+  <button ng-click="destroy()"
+          ng-show="project.$remove" class="btn btn-danger">Delete</button>
+</form>
