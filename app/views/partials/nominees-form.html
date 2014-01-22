@@ -1,0 +1,23 @@
+
+	<form ng-controller="selectNomineesCtrl" ng-submit="submitNominees()">
+
+			<div ng-repeat="category in categories">
+				<h2>{{ category.category }}</h2>
+				<ul>
+					<li ng-repeat="nominee in category.nominees">
+						<label>
+							<input
+								type="radio"
+								ng-model="$parent.title"
+								name="nom-{{ category.category | slugify }}"
+								ng-value="(nominee.title)"
+								ng-click="radioSelected((nominee.title), (category.category | slugify))">{{ nominee.title }}
+						</label></li>
+					<li>
+						<label>
+							<input type="radio" ng-model="$parent.title" name="nom-{{ category.category | slugify }}" ng-value="">leave blank
+						</label></li>
+				</ul>
+			</div>
+			<button type="submit">submit nominees</button>
+  </form>

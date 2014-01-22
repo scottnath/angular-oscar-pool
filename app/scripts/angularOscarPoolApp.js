@@ -14,7 +14,8 @@ define([
 	'angularFire',
 	'lodash',
 	'main',
-	'listNominees'
+	'listNominees',
+	'selectNominees'
 ],
 	function() {
 	
@@ -24,7 +25,8 @@ define([
 			'StringFiltersModule',
 			'aop.translate',
 			'main',
-			'aop.listNominees'
+			'aop.listNominees',
+			'aop.selectNominees'
 		]);
 		
 		
@@ -38,18 +40,16 @@ define([
 	    $routeProvider
 	      .when('/', {
 	        templateUrl: 'views/main.html',
+	        controller: 'MainCtrl'
+	      })
+	      .when('/list-nominees', {
+	        templateUrl: 'views/list-nominees.html',
 	        controller: 'getNomineesCtrl'
 	      })
-/*
-	      .when('/activities', {
-	        templateUrl: 'views/activities.html',
-	        controller: 'ActivitiesCtrl'
+	      .when('/select-nominees', {
+	        templateUrl: 'views/select-nominees.html',
+	        controller: 'selectNomineesCtrl'
 	      })
-	      .when('/edit/:projectId', {
-	        templateUrl: 'views/edit.html',
-	        controller: 'EditCtrl'
-		    })
-*/
 	      .otherwise({
 	        redirectTo: '/'
 	      });
@@ -85,9 +85,34 @@ define([
 		});
 	  
 	  // Firebase database
-	  aop.value('fbURL', 'https://scottnath.firebaseio.com/');
-	
-	
+	  aop.value('fbURL', 'https://oscars-pool.firebaseio.com');
+	  
+	  // Nominees JSON file
+	  aop.value('nomineesJSON', 'data/2014-oscar-nominees.json');
+
+		aop.factory('getNomineesData',function($http, $q, nomineesJSON){
+			return{
+				apiPath: nomineesJSON,
+				getAllNominees: function(){
+					//Creating a deferred object
+					var deferred = $q.defer();
+					
+					//Calling Web API to fetch shopping cart items
+					$http.get(this.apiPath).success(function(data){
+					  //Passing data to deferred's resolve function on successful completion
+					  deferred.resolve(data);
+					}).error(function(){
+						//Sending a friendly error message in case of failure
+						deferred.reject("An error occured while fetching items");
+					});
+					
+					//Returning the promise object
+					return deferred.promise;
+			  }
+			}
+		});
+		
+		
 		aop.factory('repeatOptions', function() {
 		  return [
 		      { id: 'yesno', name: 'Yes/No' },

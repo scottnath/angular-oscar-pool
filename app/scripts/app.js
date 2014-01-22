@@ -16,7 +16,8 @@ requirejs.config({
         angularFire: '/bower_components/angularfire/angularfire',
         lodash: '/bower_components/lodash/dist/lodash.compat.min',
         main: 'controllers/main',
-        listNominees: 'controllers/list-nominees'
+        listNominees: 'controllers/list-nominees',
+        selectNominees: 'controllers/select-nominees'
     }
 });
 

@@ -12,16 +12,17 @@ define([ 'angular' ], function() {
       };
   });
 	
-	listNominees.controller('getNomineesCtrl', function($scope,$http){
-		$scope.test = 'testing';
-		$http.get('data/2014-oscar-nominees.json')
-		.success(function(data){
-  		console.log('win');
-  		$scope.categories = data.categories;
-		})
-		.error(function(data){
-  		console.log('lost');
-		});
+	listNominees.controller('getNomineesCtrl', function($scope,$http,getNomineesData){
+		
+		getNomineesData.getAllNominees().then(function(data){
+      $scope.categories = data.categories;
+  		console.log('got categories');
+    },
+    function(errorMessage){
+      $scope.error=errorMessage;
+  		console.log('failed getting categories');
+    });
+
 	});
 	
 });
