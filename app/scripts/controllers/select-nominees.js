@@ -3,16 +3,16 @@
 
 define([ 'angular' ], function() {
 
-  var listNominees = angular.module('aop.selectNominees', []);
+  var selectNominees = angular.module('aop.selectNominees', []);
   
-  listNominees.directive('nomineesForm', function() {
+  selectNominees.directive('nomineesForm', function() {
       return {
           restrict: 'E',
           templateUrl: '/views/partials/nominees-form.html'
       };
   });
 	
-	listNominees.controller('selectNomineesCtrl', function($scope,$http,getNomineesData){
+	selectNominees.controller('selectNomineesCtrl', function($scope,$location,$http,getNomineesData,Ballots){
 
 		getNomineesData.getAllNominees().then(function(data){
       $scope.categories = data.categories;
@@ -30,7 +30,11 @@ define([ 'angular' ], function() {
         console.log(question);
     }
     $scope.submitNominees = function(){
-        console.log($scope.selectedChoices);
+	    Ballots.$add($scope.selectedChoices, function() {
+	      $timeout(function() { $location.path('/list-nominees'); });
+	    });
+      console.log($scope.selectedChoices);
+      $location.path('/');
     };
 	});
 	

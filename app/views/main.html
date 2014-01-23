@@ -1,2 +1,8 @@
 
-{{tester}}
+http://firebase.github.io/angularFire/documentation.html
+
+<a href="#" ng-hide="loginObj.user" ng-click="loginObj.$login('anonymous')">Login</a>
+
+<span ng-show="loginObj.user">
+  {{loginObj.user}} | <a href="#" ng-click="loginObj.$logout()">Logout</a>
+</span>

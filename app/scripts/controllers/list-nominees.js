@@ -13,7 +13,7 @@ define([ 'angular' ], function() {
   });
 	
 	listNominees.controller('getNomineesCtrl', function($scope,$http,getNomineesData){
-		
+		$scope.test = 'testing';
 		getNomineesData.getAllNominees().then(function(data){
       $scope.categories = data.categories;
   		console.log('got categories');

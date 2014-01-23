@@ -17,7 +17,8 @@ requirejs.config({
         lodash: '/bower_components/lodash/dist/lodash.compat.min',
         main: 'controllers/main',
         listNominees: 'controllers/list-nominees',
-        selectNominees: 'controllers/select-nominees'
+        selectNominees: 'controllers/select-nominees',
+        viewMySelections: 'controllers/view-my-selections'
     }
 });
 

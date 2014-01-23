@@ -15,7 +15,8 @@ define([
 	'lodash',
 	'main',
 	'listNominees',
-	'selectNominees'
+	'selectNominees',
+	'viewMySelections'
 ],
 	function() {
 	
@@ -26,7 +27,8 @@ define([
 			'aop.translate',
 			'main',
 			'aop.listNominees',
-			'aop.selectNominees'
+			'aop.selectNominees',
+			'aop.viewMySelections'
 		]);
 		
 		
@@ -49,6 +51,10 @@ define([
 	      .when('/select-nominees', {
 	        templateUrl: 'views/select-nominees.html',
 	        controller: 'selectNomineesCtrl'
+	      })
+	      .when('/view-my-selections', {
+	        templateUrl: 'views/view-my-selections.html',
+	        controller: 'viewMySelectionsCtrl'
 	      })
 	      .otherwise({
 	        redirectTo: '/'
@@ -73,13 +79,21 @@ define([
       };
 			
 		});
-	  
-	  aop.filter('recordTypeName', function(siteConfig) {
-		  return function(input) {
-		    return _.filter(siteConfig.getRecordOptions(), {id: input})[0].name;
-		  };
-		});
-  
+	  aop.service('myAuthService', ['$rootScope','fbURL', function($rootScope, fbURL) {
+			var chatRef = new Firebase(fbURL);
+			var auth = new FirebaseSimpleLogin(chatRef, function(error, user) {
+			  if (error) {
+			    // an error occurred while attempting login
+			    console.log(error);
+			  } else if (user) {
+			    // user authenticated with Firebase
+			    console.log('User ID: ' + user.id + ', Provider: ' + user.provider);
+			  } else {
+			    // user is logged out
+			  }
+			});
+		}]);
+
 		aop.factory('Projects', function($firebase, Firebase, fbURL) {
 		  return $firebase(new Firebase(fbURL));
 		});
@@ -112,6 +126,10 @@ define([
 			}
 		});
 		
+  
+		aop.factory('Ballots', function($firebase, Firebase, fbURL) {
+		  return $firebase(new Firebase(fbURL));
+		});
 		
 		aop.factory('repeatOptions', function() {
 		  return [
