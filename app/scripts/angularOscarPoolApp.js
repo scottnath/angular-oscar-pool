@@ -15,6 +15,7 @@ define([
 	'lodash',
 	'main',
 	'listNominees',
+	'listBallots',
 	'selectNominees',
 	'viewMySelections'
 ],
@@ -27,8 +28,10 @@ define([
 			'aop.translate',
 			'main',
 			'aop.listNominees',
+			'aop.listBallots',
 			'aop.selectNominees',
-			'aop.viewMySelections'
+			'aop.viewMySelections',
+			'aop.translate'
 		]);
 		
 		
@@ -47,6 +50,10 @@ define([
 	      .when('/list-nominees', {
 	        templateUrl: 'views/list-nominees.html',
 	        controller: 'getNomineesCtrl'
+	      })
+	      .when('/list-ballots', {
+	        templateUrl: 'views/list-ballots.html',
+	        controller: 'listBallotsCtrl'
 	      })
 	      .when('/select-nominees', {
 	        templateUrl: 'views/select-nominees.html',
@@ -94,7 +101,8 @@ define([
 			});
 		}]);
 
-		aop.factory('Projects', function($firebase, Firebase, fbURL) {
+
+		aop.factory('Ballots', function($firebase, Firebase, fbURL) {
 		  return $firebase(new Firebase(fbURL));
 		});
 	  
@@ -124,11 +132,6 @@ define([
 					return deferred.promise;
 			  }
 			}
-		});
-		
-  
-		aop.factory('Ballots', function($firebase, Firebase, fbURL) {
-		  return $firebase(new Firebase(fbURL));
 		});
 		
 		aop.factory('repeatOptions', function() {

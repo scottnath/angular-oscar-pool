@@ -9,13 +9,13 @@
   </tr>
   </thead>
   <tbody>
-  <tr ng-repeat="project in projects | orderByPriority | filter:search | orderBy:'name'">
-    <td><a href="{{project.site}}" target="_blank">{{project.name}}</a></td>
-    <td>{{project.repeat | recordTypeName}}</td>
+  <tr ng-repeat="ballot in ballots">
+    <td><a href="{{project.site}}" target="_blank">TEST{{project.name}}</a></td>
+    <td>{{project.repeat}}</td>
     <td>{{project.goodbad}}</td>
     <td>{{project.startdate}}</td>
     <td>
-      <a href="#/edit/{{project.$id}}"><i class="icon-pencil"></i>EDIT</a>
+      <a href="#/edit/{{ballot.$id}}"><i class="icon-pencil"></i>EDIT</a>
     </td>
   </tr>
   </tbody>
